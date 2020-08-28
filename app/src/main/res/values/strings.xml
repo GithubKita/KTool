@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">KTool</string>
+    <string name="img_cutout">抠图工具</string>
+    <string name="html_to_img">网页转长图</string>
+</resources>
