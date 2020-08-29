@@ -52,4 +52,8 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    //二维码相关 AndroidX 版本
+    implementation 'com.king.zxing:zxing-lite:1.1.9-androidx'
+    //权限
+    implementation 'com.hjq:xxpermissions:8.2'
 }

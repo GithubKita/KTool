@@ -19,5 +19,10 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, HtmlToImgActivity::class.java)
             startActivity(intent)
         }
+
+        findViewById<View>(R.id.btnQRCode).setOnClickListener {
+            val intent = Intent(this, QRCodeActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
