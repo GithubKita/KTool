@@ -8,7 +8,7 @@
 
     <Button
         android:id="@+id/btnImgCutOut"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:textAllCaps="false"
         android:text="@string/img_cutout"
@@ -19,7 +19,7 @@
 
     <Button
         android:id="@+id/btnHtmlToImg"
-        android:layout_width="100dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:textAllCaps="false"
         android:text="@string/html_to_img"
@@ -30,7 +30,7 @@
 
     <Button
         android:id="@+id/btnQRCode"
-        android:layout_width="100dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:textAllCaps="false"
         android:text="@string/qr_code"
@@ -38,5 +38,16 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnHtmlToImg" />
+
+    <Button
+        android:id="@+id/btnBankReader"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="@string/bank_card_reader"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnQRCode" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

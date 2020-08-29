@@ -3,4 +3,5 @@
     <string name="img_cutout">抠图工具</string>
     <string name="html_to_img">网页转长图</string>
     <string name="qr_code">扫码</string>
+    <string name="bank_card_reader">银行卡号读取</string>
 </resources>

@@ -20,6 +20,7 @@ import com.kita.ktool.R
 
  * 作者：PC on 2020/8/28 18:21
  * 邮箱：wang_kita@163.com
+ * 扫码
  */
 class QRCodeActivity: AppCompatActivity(){
 

@@ -11,6 +11,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         findViewById<View>(R.id.btnImgCutOut).setOnClickListener {
             val intent = Intent(this, ImgCutoutActivity::class.java)
             startActivity(intent)
@@ -22,6 +23,12 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<View>(R.id.btnQRCode).setOnClickListener {
             val intent = Intent(this, QRCodeActivity::class.java)
+            startActivity(intent)
+        }
+
+
+        findViewById<View>(R.id.btnBankReader).setOnClickListener {
+            val intent = Intent(this, BankCardReaderActivity::class.java)
             startActivity(intent)
         }
     }
