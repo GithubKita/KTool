@@ -1,6 +1,5 @@
 package com.kita.ktool.ui
 
-import android.R.attr
 import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
@@ -17,16 +16,13 @@ import com.kita.ktool.R
 import io.card.payment.CardIOActivity
 import io.card.payment.CreditCard
 
-
 /**
-
  * 作者：PC on 2020/8/29 11:32
  * 邮箱：wang_kita@163.com
  * 扫描银行卡，提取卡号
  */
 class BankCardReaderActivity: AppCompatActivity(){
-
-    val MY_SCAN_REQUEST_CODE = 100
+    private val MY_SCAN_REQUEST_CODE = 100
     private lateinit var tvResult: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -86,7 +82,7 @@ class BankCardReaderActivity: AppCompatActivity(){
     private fun startReader(){
         val scanIntent = Intent(this, CardIOActivity::class.java)
         // customize these values to suit your needs.
-        scanIntent.putExtra(CardIOActivity.EXTRA_REQUIRE_EXPIRY, true) // default: false
+        scanIntent.putExtra(CardIOActivity.EXTRA_REQUIRE_EXPIRY, false) // default: false
         scanIntent.putExtra(CardIOActivity.EXTRA_REQUIRE_CVV, false) // default: false
         scanIntent.putExtra(CardIOActivity.EXTRA_REQUIRE_POSTAL_CODE, false) // default: false
         // MY_SCAN_REQUEST_CODE is arbitrary and is only used within this activity.
@@ -111,7 +107,7 @@ class BankCardReaderActivity: AppCompatActivity(){
                     data.getParcelableExtra(CardIOActivity.EXTRA_SCAN_RESULT)
                 // Never log a raw card number. Avoid displaying it, but if necessary use getFormattedCardNumber()
                 resultDisplayStr = """
-                    Card Number: ${scanResult.redactedCardNumber}
+                    Card Number: ${scanResult.formattedCardNumber}
                     """.trimIndent()
                 // Do something with the raw number, e.g.:
                 // myService.setCardNumber( scanResult.cardNumber );
